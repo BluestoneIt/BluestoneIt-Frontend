@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import EmailLink from './EmailLink';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -59,7 +60,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="contact-item mb-3">
                 <FaEnvelope className="me-2" />
-                <span>info@bluestoneit.com</span>
+                <EmailLink email="info@bluestoneit.com" />
               </div>
               <div className="social-links">
                 <a href="#" className="social-link me-2"><FaFacebookF /></a>

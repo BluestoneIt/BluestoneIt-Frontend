@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaPaperPlane } from 'react-icons/fa';
+import EmailLink from '../components/EmailLink';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -88,7 +89,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="contact-details">
                     <h6>Email Address</h6>
-                    <p>info@bluestoneit.com<br />contact@bluestoneit.com</p>
+                    <p><EmailLink email="info@bluestoneit.com" /></p>
                   </div>
                 </div>
 

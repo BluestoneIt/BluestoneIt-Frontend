@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import EmailLink from '../components/EmailLink';
 
 const PrivacyPolicy: React.FC = () => {
   return (
@@ -181,7 +182,7 @@ const PrivacyPolicy: React.FC = () => {
                         <p>123 Tech Innovation Drive<br />
                         Digital City, TC 12345<br />
                         United States</p>
-                        <p><strong>Email:</strong> privacy@bluestoneit.com</p>
+                        <p><strong>Email:</strong> <EmailLink email="info@bluestoneit.com" /></p>
                         <p><strong>Phone:</strong> +1 (555) 123-4567</p>
                       </div>
                     </div>
