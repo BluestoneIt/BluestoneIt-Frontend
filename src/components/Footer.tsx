@@ -81,8 +81,8 @@ const Footer: React.FC = () => {
           </Col>
           <Col lg={6} md={6} className="text-end">
             <p className="mb-0 text-light">
-              <a href="#privacy" className="footer-link me-3">Privacy Policy</a>
-              <a href="#terms" className="footer-link">Terms of Service</a>
+              <a href="/privacy-policy" className="footer-link me-3">Privacy Policy</a>
+              <a href="/terms-conditions" className="footer-link">Terms of Service</a>
             </p>
           </Col>
         </Row>
