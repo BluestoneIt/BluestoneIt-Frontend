@@ -1,11 +1,19 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { useMetaTags } from '../hooks/useMetaTags';
 import { FaEye, FaBullseye, FaHandshake, FaLightbulb, FaUsers, FaRocket, FaCheckCircle, FaAward } from 'react-icons/fa';
 
 const About: React.FC = () => {
+  useMetaTags({
+    title: 'About Us | Bluestone IT Tech LLC',
+    description: 'Bluestone IT Tech LLC is committed to delivering high-quality IT solutions that help organizations grow, innovate, and stay competitive in a rapidly evolving digital world.',
+    keywords: 'IT consulting company, technology solutions, digital transformation, IT services'
+  });
+
   return (
     <>
+
       {/* Page Header */}
       <section className="page-header">
         <Container>
@@ -27,21 +35,21 @@ const About: React.FC = () => {
             <Col lg={6} className="mb-4" data-aos="fade-right">
               <h2 className="section-title">Who We Are</h2>
               <p className="lead mb-4">
-                <strong>Bluestone IT Tech LLC</strong> is committed to delivering high-quality IT solutions 
+                <strong>Bluestone IT Tech LLC</strong> is committed to delivering high-quality IT solutions
                 that help organizations grow, innovate, and stay competitive in a rapidly evolving digital world.
               </p>
               <p>
-                We are a technology consulting firm delivering scalable and secure IT solutions to global 
-                clients across multiple industries. Our expertise spans SAP, Cloud, DevOps, Data Engineering, 
+                We are a technology consulting firm delivering scalable and secure IT solutions to global
+                clients across multiple industries. Our expertise spans SAP, Cloud, DevOps, Data Engineering,
                 Application Development, and IT Staffing.
               </p>
               <p>
-                We help organizations accelerate growth through innovative technology solutions, expert consulting, 
-                and reliable offshore and onsite delivery models. Our team comprises certified specialists with 
+                We help organizations accelerate growth through innovative technology solutions, expert consulting,
+                and reliable offshore and onsite delivery models. Our team comprises certified specialists with
                 deep industry knowledge and proven expertise.
               </p>
               <p>
-                It is no coincidence that the name <strong>Bluestone IT Tech LLC</strong> has become 
+                It is no coincidence that the name <strong>Bluestone IT Tech LLC</strong> has become
                 synonymous with quality and committed service delivery of technology solutions to our valued clients.
               </p>
             </Col>
@@ -206,7 +214,7 @@ const About: React.FC = () => {
             <Col lg={8} className="mx-auto">
               <div className="journey-content" data-aos="fade-up" data-aos-delay="100">
                 <p className="lead">
-                  Bluestone IT Tech LLC helps organizations accelerate growth through innovative technology 
+                  Bluestone IT Tech LLC helps organizations accelerate growth through innovative technology
                   solutions, expert consulting, and reliable offshore and onsite delivery models.
                 </p>
                 <Row className="mt-4">

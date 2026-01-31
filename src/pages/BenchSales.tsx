@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { 
-  FaUsers, 
-  FaFileAlt, 
-  FaDollarSign, 
+import { useMetaTags } from '../hooks/useMetaTags';
+import {
+  FaUsers,
+  FaFileAlt,
+  FaDollarSign,
   FaCheckCircle,
   FaHandshake,
   FaShieldAlt,
@@ -77,8 +78,15 @@ const BenchSales: React.FC = () => {
     'Post-placement support'
   ];
 
+  useMetaTags({
+    title: 'Bench Sales Services USA | Bluestone IT Tech LLC',
+    description: 'Pre-screened, market-ready IT consultants available for immediate deployment. Bench sales services across SAP, Cloud, Data, DevOps, and Full Stack technologies.',
+    keywords: 'bench sales, IT bench consultants, candidate marketing, pre-screened consultants, IT talent pool'
+  });
+
   return (
     <>
+
       {/* Page Header */}
       <section className="page-header">
         <Container>

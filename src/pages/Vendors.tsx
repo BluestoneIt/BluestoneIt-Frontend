@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { 
-  FaHandshake, 
-  FaFileContract, 
-  FaShieldAlt, 
+import { useMetaTags } from '../hooks/useMetaTags';
+import {
+  FaHandshake,
+  FaFileContract,
+  FaShieldAlt,
   FaCheckCircle,
   FaEnvelope,
   FaClock,
@@ -86,8 +87,15 @@ const Vendors: React.FC = () => {
     }
   ];
 
+  useMetaTags({
+    title: 'IT Vendor Partnership | Bluestone IT Tech LLC',
+    description: 'Partner with Bluestone IT Tech LLC for seamless IT staffing and consulting. We collaborate with prime vendors and implementation partners across the US IT ecosystem.',
+    keywords: 'IT vendor partnership, prime vendor, implementation partner, IT staffing partner, vendor collaboration'
+  });
+
   return (
     <>
+
       {/* Page Header */}
       <section className="page-header">
         <Container>
