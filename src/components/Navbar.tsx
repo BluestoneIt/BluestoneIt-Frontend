@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
+import { Navbar as BootstrapNavbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 
@@ -38,11 +38,11 @@ const Navbar: React.FC = () => {
         <BootstrapNavbar.Brand as={Link} to="/" onClick={handleNavClose}>
           <img
             src="/Bluestone.jpeg"
-            alt="Bluestone IT"
+            alt="Bluestone IT Tech LLC"
             height="45"
             className="d-inline-block align-top navbar-logo"
           />
-          <span className="brand-text ms-2">Bluestone IT</span>
+          <span className="brand-text ms-2">Bluestone IT Tech LLC</span>
         </BootstrapNavbar.Brand>
 
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav">
@@ -66,6 +66,29 @@ const Navbar: React.FC = () => {
               className={location.pathname === '/about' ? 'active' : ''}
             >
               About Us
+            </Nav.Link>
+            <NavDropdown title="Services" id="services-dropdown">
+              <NavDropdown.Item as={Link} to="/services" onClick={handleNavClose}>
+                All Services
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item as={Link} to="/staffing" onClick={handleNavClose}>
+                IT Staffing
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/vendors" onClick={handleNavClose}>
+                For Vendors
+              </NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/bench-sales" onClick={handleNavClose}>
+                Bench Sales
+              </NavDropdown.Item>
+            </NavDropdown>
+            <Nav.Link
+              as={Link}
+              to="/careers"
+              onClick={handleNavClose}
+              className={location.pathname === '/careers' ? 'active' : ''}
+            >
+              Careers
             </Nav.Link>
             <Nav.Link
               as={Link}

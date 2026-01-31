@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FaChevronUp } from 'react-icons/fa';
 
 const BackToTop: React.FC = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
 
   // Show button when page is scrolled down
   const toggleVisibility = () => {

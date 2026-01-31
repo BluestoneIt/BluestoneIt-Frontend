@@ -68,8 +68,8 @@ const Contact: React.FC = () => {
                     <FaMapMarkerAlt />
                   </div>
                   <div className="contact-details">
-                    <h6>Office Address</h6>
-                    <p>123 Tech Innovation Drive<br />Digital City, TC 12345<br />United States</p>
+                    <h6>Headquarters</h6>
+                    <p>29010 239th Ave SE<br />Maple Valley, Washington 98010<br />United States</p>
                   </div>
                 </div>
 
@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="contact-details">
                     <h6>Phone Number</h6>
-                    <p>+1 (555) 123-4567<br />+1 (555) 987-6543</p>
+                    <p>+1-XXX-XXX-XXXX</p>
                   </div>
                 </div>
 
@@ -89,7 +89,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="contact-details">
                     <h6>Email Address</h6>
-                    <p><EmailLink email="info@bluestoneit.com" /></p>
+                    <p><EmailLink email="info@bluestoneittech.com" /></p>
                   </div>
                 </div>
 
@@ -206,14 +206,14 @@ const Contact: React.FC = () => {
             <Col lg={12} data-aos="fade-up" data-aos-delay="100">
               <div className="map-container">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3024.2219901290355!2d-74.00369368459391!3d40.71312937933185!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1642678901234!5m2!1sen!2sus"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2700.845!2d-122.036926!3d47.373348!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDfCsDIyJzI0LjEiTiAxMjLCsDAyJzEyLjkiVw!5e0!3m2!1sen!2sus!4v1642678901234!5m2!1sen!2sus"
                   width="100%"
                   height="400"
                   style={{ border: 0, borderRadius: '10px' }}
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Bluestone IT Office Location"
+                  title="Bluestone IT Tech LLC - Maple Valley, Washington"
                 ></iframe>
               </div>
             </Col>
