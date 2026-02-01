@@ -288,6 +288,11 @@ html {
   50% { transform: translateY(-20px); }
 }
 
+@keyframes float-mobile {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
 /* Services Section */
 .services-section {
   padding: 5rem 0;
@@ -1031,4 +1036,11 @@ html {
   border-radius: 8px;
   border-left: 4px solid var(--primary-color);
   margin-bottom: 2rem;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero-image-container img {
+    animation: float-mobile 3s ease-in-out infinite;
+  }
 }
