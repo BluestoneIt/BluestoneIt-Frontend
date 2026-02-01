@@ -1,12 +1,12 @@
 import React from 'react';
-import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
-import { 
-  FaBriefcase, 
-  FaTrophy, 
-  FaDollarSign, 
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import {
+  FaBriefcase,
+  FaTrophy,
+  FaDollarSign,
   FaGlobeAmericas,
-  FaEnvelope,
-  FaCheckCircle
+  FaCheckCircle,
+  FaEnvelope
 } from 'react-icons/fa';
 import EmailLink from '../components/EmailLink';
 
@@ -34,38 +34,38 @@ const Careers: React.FC = () => {
     }
   ];
 
-  const openings = [
-    {
-      title: 'SAP Consultant',
-      type: 'Full-Time',
-      location: 'Remote / Onsite'
-    },
-    {
-      title: 'Cloud & DevOps Engineer',
-      type: 'Full-Time',
-      location: 'Remote / Onsite'
-    },
-    {
-      title: 'Data Engineer',
-      type: 'Full-Time',
-      location: 'Remote / Onsite'
-    },
-    {
-      title: 'Full Stack Developer',
-      type: 'Full-Time / Contract',
-      location: 'Remote / Onsite'
-    },
-    {
-      title: 'QA Automation Engineer',
-      type: 'Contract',
-      location: 'Remote'
-    },
-    {
-      title: 'Business Analyst',
-      type: 'Full-Time',
-      location: 'Onsite'
-    }
-  ];
+  // const openings = [
+  //   {
+  //     title: 'SAP Consultant',
+  //     type: 'Full-Time',
+  //     location: 'Remote / Onsite'
+  //   },
+  //   {
+  //     title: 'Cloud & DevOps Engineer',
+  //     type: 'Full-Time',
+  //     location: 'Remote / Onsite'
+  //   },
+  //   {
+  //     title: 'Data Engineer',
+  //     type: 'Full-Time',
+  //     location: 'Remote / Onsite'
+  //   },
+  //   {
+  //     title: 'Full Stack Developer',
+  //     type: 'Full-Time / Contract',
+  //     location: 'Remote / Onsite'
+  //   },
+  //   {
+  //     title: 'QA Automation Engineer',
+  //     type: 'Contract',
+  //     location: 'Remote'
+  //   },
+  //   {
+  //     title: 'Business Analyst',
+  //     type: 'Full-Time',
+  //     location: 'Onsite'
+  //   }
+  // ];
 
   return (
     <>
@@ -118,7 +118,7 @@ const Careers: React.FC = () => {
       </section>
 
       {/* Current Openings */}
-      <section className="py-5 bg-light">
+      {/* <section className="py-5 bg-light">
         <Container>
           <Row className="mb-5">
             <Col lg={12} className="text-center" data-aos="fade-up">
@@ -152,10 +152,10 @@ const Careers: React.FC = () => {
             ))}
           </Row>
         </Container>
-      </section>
+      </section> */}
 
       {/* Application Section */}
-      <section className="py-5">
+      {/* <section className="py-5">
         <Container>
           <Row>
             <Col lg={6} className="mx-auto" data-aos="fade-up">
@@ -233,16 +233,40 @@ const Careers: React.FC = () => {
             </Col>
           </Row>
         </Container>
+      </section> */}
+      <section className="py-5">
+        <Container>
+          <Row>
+            <Col lg={8} className="mx-auto" data-aos="fade-up">
+              <Card className="border-0 shadow-lg">
+                <Card.Body className="p-5">
+                  <div className="text-center mb-4">
+                    <div className="mb-3" style={{ fontSize: '3rem', color: '#667eea' }}>
+                      <FaEnvelope />
+                    </div>
+                    <h3 className="mb-3">Get in Touch</h3>
+                    <p className="text-muted">
+                      Interested in joining our team? Reach out to us at just one click below.:
+                    </p>
+                    <div className="h5">
+                      <EmailLink email="careers@bluestoneittech.com" />
+                    </div>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
-      {/* Company Culture */}
+      {/* Our Culture and Values */}
       <section className="py-5 bg-light">
         <Container>
           <Row className="align-items-center">
             <Col lg={6} data-aos="fade-right">
               <h2 className="display-5 fw-bold mb-4">Our Culture</h2>
               <p className="lead text-muted mb-4">
-                At Bluestone IT Tech LLC, we foster an environment where innovation thrives and 
+                At Bluestone IT Tech LLC, we foster an environment where innovation thrives and
                 every team member's contribution is valued.
               </p>
               <ul className="list-unstyled">
@@ -269,23 +293,23 @@ const Careers: React.FC = () => {
               </ul>
             </Col>
             <Col lg={6} data-aos="fade-left">
-              <Card className="border-0 shadow-lg bg-gradient text-white">
+              <Card className="border-0 shadow-lg bg-navy-card text-white">
                 <Card.Body className="p-5">
-                  <h3 className="mb-4">Core Values</h3>
+                  <h3 className="mb-4 text-white">Core Values</h3>
                   <div className="mb-4">
-                    <h5 className="mb-2">Integrity</h5>
+                    <h5 className="mb-2 text-white">Integrity</h5>
                     <p>We operate with honesty and transparency in everything we do</p>
                   </div>
                   <div className="mb-4">
-                    <h5 className="mb-2">Innovation</h5>
+                    <h5 className="mb-2 text-white">Innovation</h5>
                     <p>We embrace new ideas and continuously seek better solutions</p>
                   </div>
                   <div className="mb-4">
-                    <h5 className="mb-2">Excellence</h5>
+                    <h5 className="mb-2 text-white">Excellence</h5>
                     <p>We strive for the highest quality in our work and services</p>
                   </div>
                   <div>
-                    <h5 className="mb-2">Collaboration</h5>
+                    <h5 className="mb-2 text-white">Collaboration</h5>
                     <p>We work together to achieve common goals and mutual success</p>
                   </div>
                 </Card.Body>

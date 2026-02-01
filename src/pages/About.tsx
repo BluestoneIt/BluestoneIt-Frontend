@@ -46,11 +46,12 @@ const About: React.FC = () => {
               </p>
             </Col>
             <Col lg={6} data-aos="fade-left">
-              <div className="about-image-container">
+              <div className="hero-image-container">
                 <img
-                  src="/Bluestone.jpeg"
+                  src="/BluestoneItTech.png"
                   alt="Bluestone IT Tech LLC"
                   className="img-fluid rounded-3 shadow"
+                  style={{ marginTop: '-10px', height: '500px', width: '600px', objectFit: 'cover', borderRadius: '50%',  backgroundColor: '#3658f4' }}
                 />
               </div>
             </Col>

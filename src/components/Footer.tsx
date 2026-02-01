@@ -13,14 +13,13 @@ const Footer: React.FC = () => {
           <Col lg={4} md={6} className="mb-4">
             <div className="footer-brand">
               <img
-                src="/Bluestone.jpeg"
+                src="/BlueStoreIt.png"
                 alt="Bluestone IT Tech LLC"
-                height="50"
                 className="footer-logo mb-3"
               />
               <h5 className="text-white mb-3">Bluestone IT Tech LLC</h5>
               <p className="text-light">
-                Leading the digital transformation with innovative IT solutions and exceptional service delivery. 
+                Leading the digital transformation with innovative IT solutions and exceptional service delivery.
                 Your trusted partner for technology excellence.
               </p>
             </div>
@@ -84,6 +83,13 @@ const Footer: React.FC = () => {
             <p className="mb-0 text-light">
               <a href="/privacy-policy" className="footer-link me-3">Privacy Policy</a>
               <a href="/terms-conditions" className="footer-link">Terms of Service</a>
+            </p>
+          </Col>
+        </Row>
+        <Row className="border-top border-secondary pt-3 mt-4">
+          <Col lg={12} className="text-center">
+            <p className="mb-0 text-light fw-bold">
+              Talent. Technology. Trusted Delivery.
             </p>
           </Col>
         </Row>

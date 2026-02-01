@@ -35,16 +35,16 @@ const Navbar: React.FC = () => {
       className={`custom-navbar ${scrolled ? 'scrolled' : ''}`}
     >
       <Container>
-        <BootstrapNavbar.Brand as={Link} to="/" onClick={handleNavClose}>
-          <img
-            src="/Bluestone.jpeg"
-            alt="Bluestone IT Tech LLC"
-            height="45"
-            className="d-inline-block align-top navbar-logo"
-          />
-          <span className="brand-text ms-2">Bluestone IT Tech LLC</span>
-        </BootstrapNavbar.Brand>
-
+        <div className="d-flex align-items-center">
+          <BootstrapNavbar.Brand as={Link} to="/" onClick={handleNavClose}>
+            <img
+              src="/BlueStoreIt.png"
+              alt="Bluestone IT Tech LLC"
+              className="navbar-logo"
+            />
+          </BootstrapNavbar.Brand>
+          <h5 className="brand-text ms-0 mb-0">Bluestone IT Tech LLC</h5>
+        </div>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav">
           {expanded ? <FaTimes /> : <FaBars />}
         </BootstrapNavbar.Toggle>
