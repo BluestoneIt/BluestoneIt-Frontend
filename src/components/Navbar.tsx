@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Navbar as BootstrapNavbar, Nav, Container, NavDropdown } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import logo from '../assets/SymbolBluestone.png';
 
 const Navbar: React.FC = () => {
   const [expanded, setExpanded] = useState(false);
@@ -38,7 +39,7 @@ const Navbar: React.FC = () => {
         <div className="d-flex align-items-center">
           <BootstrapNavbar.Brand as={Link} to="/" onClick={handleNavClose}>
             <img
-              src="/BlueStoreIt.png"
+              src={logo}
               alt="Bluestone IT Tech LLC"
               className="navbar-logo"
             />

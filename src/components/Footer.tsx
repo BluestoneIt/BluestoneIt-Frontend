@@ -2,6 +2,7 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaFacebookF, FaTwitter, FaLinkedinIn, FaInstagram, FaPhone, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 import EmailLink from './EmailLink';
+import logo from '../assets/SymbolBluestone.png';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -13,11 +14,11 @@ const Footer: React.FC = () => {
           <Col lg={4} md={6} className="mb-4">
             <div className="footer-brand">
               <img
-                src="/BlueStoreIt.png"
-                alt="Bluestone IT Tech LLC"
+                src={logo}
+                alt="Bluestone IT Technologies LLC"
                 className="footer-logo mb-3"
               />
-              <h5 className="text-white mb-3">Bluestone IT Tech LLC</h5>
+              <h5 className="text-white mb-3">Bluestone IT Technologies LLC</h5>
               <p className="text-light">
                 Leading the digital transformation with innovative IT solutions and exceptional service delivery.
                 Your trusted partner for technology excellence.
@@ -55,7 +56,7 @@ const Footer: React.FC = () => {
               </div>
               <div className="contact-item mb-2">
                 <FaPhone className="me-2" />
-                <span>+1-XXX-XXX-XXXX</span>
+                <span>+1-484-521-1051</span>
               </div>
               <div className="contact-item mb-3">
                 <FaEnvelope className="me-2" />

@@ -79,7 +79,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="contact-details">
                     <h6>Phone Number</h6>
-                    <p>+1-XXX-XXX-XXXX</p>
+                    <p>+1-484-521-1051</p>
                   </div>
                 </div>
 
@@ -231,8 +231,8 @@ const Contact: React.FC = () => {
                 Join the growing list of satisfied clients who trust Bluestone IT 
                 for their technology needs.
               </p>
-              <Button variant="light" size="lg" href="tel:+15551234567">
-                Call Now: +1 (555) 123-4567
+              <Button variant="light" size="lg" href="tel:+14845211051">
+                Call Now: +1-484-521-1051
               </Button>
             </Col>
           </Row>

@@ -151,13 +151,15 @@ html {
 
 .navbar-logo {
   height: 40px;
-  width: 40px;
-  max-width: 40px;
-  object-fit: cover;
-  border-radius: 50%;
+  width: auto;
+  max-height: 40px;
+  object-fit: contain;
   transition: all 0.3s ease;
+  filter: brightness(1.1) contrast(1.2);
   padding: 0;
   box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transform: scale(1.5);
+  transform-origin: center;
 }
 
 .navbar-logo:hover {

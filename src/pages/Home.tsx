@@ -42,10 +42,10 @@ const Home: React.FC = () => {
             <Col lg={6} className="hero-image" data-aos="fade-left">
               <div className="hero-image-container">
                 <img
-                  src="/BluestoneItTech.png"
+                  src="/BluestoneUpdateLogoITTech.png"
                   alt="Bluestone IT Tech LLC"
                   className="img-fluid rounded-3 shadow"
-                  style={{ marginTop: '-10px', height: '500px', width: '600px', objectFit: 'cover', borderRadius: '50%', backgroundColor: '#3658f4' }}
+                  style={{ marginTop: '-10px', height: '500px', width: '600px', objectFit: 'cover', borderRadius: '50%', backgroundColor: '#f1f1f1' }}
                 />
               </div>
             </Col>

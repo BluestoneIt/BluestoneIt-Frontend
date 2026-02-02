@@ -27,7 +27,7 @@ const About: React.FC = () => {
             <Col lg={6} className="mb-4" data-aos="fade-right">
               <h2 className="section-title">Who We Are</h2>
               <p className="lead mb-4">
-                <strong>Bluestone IT Tech LLC</strong> is committed to delivering high-quality IT solutions 
+                <strong>Bluestone IT Technologies LLC</strong> is committed to delivering high-quality IT solutions 
                 that help organizations grow, innovate, and stay competitive in a rapidly evolving digital world.
               </p>
               <p>
@@ -41,17 +41,17 @@ const About: React.FC = () => {
                 deep industry knowledge and proven expertise.
               </p>
               <p>
-                It is no coincidence that the name <strong>Bluestone IT Tech LLC</strong> has become 
+                It is no coincidence that the name <strong>Bluestone IT Technologies LLC</strong> has become 
                 synonymous with quality and committed service delivery of technology solutions to our valued clients.
               </p>
             </Col>
             <Col lg={6} data-aos="fade-left">
               <div className="hero-image-container">
                 <img
-                  src="/BluestoneItTech.png"
+                  src="/BluestoneUpdateLogoITTech.png"
                   alt="Bluestone IT Tech LLC"
                   className="img-fluid rounded-3 shadow"
-                  style={{ marginTop: '-10px', height: '500px', width: '600px', objectFit: 'cover', borderRadius: '50%',  backgroundColor: '#3658f4' }}
+                  style={{ marginTop: '-10px', height: '500px', width: '600px', objectFit: 'cover', borderRadius: '50%',  backgroundColor: '#f1f1f1' }}
                 />
               </div>
             </Col>
