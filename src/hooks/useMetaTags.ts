@@ -1,21 +1,14 @@
 import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+import { metadataConfig, type MetaTags } from '../config/metadata';
 
-interface MetaTags {
-  title?: string;
-  description?: string;
-  keywords?: string;
-  ogTitle?: string;
-  ogDescription?: string;
-  ogImage?: string;
-  ogUrl?: string;
-  twitterCard?: string;
-  twitterTitle?: string;
-  twitterDescription?: string;
-  twitterImage?: string;
-}
+export const useMetaTags = (overrideMetaTags?: MetaTags) => {
+  const location = useLocation();
 
-export const useMetaTags = (metaTags: MetaTags) => {
   useEffect(() => {
+    // Get metadata from config or use override
+    const metaTags = overrideMetaTags || metadataConfig[location.pathname] || {};
+
     // Update document title
     if (metaTags.title) {
       document.title = metaTags.title;
@@ -90,5 +83,5 @@ export const useMetaTags = (metaTags: MetaTags) => {
         descElement.content = 'Leading IT staffing and consulting company providing offshore and onsite IT solutions, SAP services, cloud & DevOps, and data engineering.';
       }
     };
-  }, [metaTags]);
+  }, [overrideMetaTags, location.pathname]);
 };

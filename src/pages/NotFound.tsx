@@ -2,14 +2,8 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaHome, FaExclamationTriangle } from 'react-icons/fa';
-import { useMetaTags } from '../hooks/useMetaTags';
 
 const NotFound: React.FC = () => {
-  useMetaTags({
-    title: '404 Not Found | Bluestone IT Tech LLC',
-    description: 'The page you are looking for does not exist. Return to the homepage or contact support for assistance.',
-    keywords: '404, page not found, Bluestone IT Tech LLC, error'
-  });
 
   return (
     <div className="not-found-page">

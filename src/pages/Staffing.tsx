@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useMetaTags } from '../hooks/useMetaTags';
 import {
   FaGlobe,
   FaMapMarkerAlt,
@@ -91,12 +90,6 @@ const Staffing: React.FC = () => {
     'Ongoing support post-deployment',
     'Reduced hiring risk'
   ];
-
-  useMetaTags({
-    title: 'Offshore & Onsite IT Staffing Services | Bluestone IT Tech LLC',
-    description: 'We deliver JD-aligned offshore and onsite IT consultants to prime vendors and direct clients across the USA.',
-    keywords: 'IT staffing, offshore staffing, onsite consultants, contract IT staffing, SAP staffing, cloud staffing, DevOps staffing'
-  });
 
   return (
     <>

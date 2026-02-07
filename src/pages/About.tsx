@@ -1,15 +1,9 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { useMetaTags } from '../hooks/useMetaTags';
 import { FaEye, FaBullseye, FaHandshake, FaLightbulb, FaUsers, FaRocket, FaCheckCircle, FaAward } from 'react-icons/fa';
 
 const About: React.FC = () => {
-  useMetaTags({
-    title: 'About Us | Bluestone IT Tech LLC',
-    description: 'Bluestone IT Tech LLC is committed to delivering high-quality IT solutions that help organizations grow, innovate, and stay competitive in a rapidly evolving digital world.',
-    keywords: 'IT consulting company, technology solutions, digital transformation, IT services'
-  });
 
   return (
     <>
