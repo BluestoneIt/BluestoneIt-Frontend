@@ -1,11 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { 
-  FaCode, 
-  FaChartLine, 
-  FaUsers, 
-  FaAward, 
+import { useMetaTags } from '../hooks/useMetaTags';
+import {
+  FaCode,
+  FaCloud,
+  FaChartLine,
+  FaUsers,
+  FaAward,
   FaCogs,
   FaDatabase,
   FaLightbulb,
@@ -16,8 +18,15 @@ import {
 } from 'react-icons/fa';
 
 const Home: React.FC = () => {
+  useMetaTags({
+    title: 'US IT Staffing & Offshore Delivery | Bluestone IT Tech LLC',
+    description: 'Bluestone IT Tech LLC is a US IT staffing and consulting company delivering offshore and onsite IT candidates across SAP, Cloud, DevOps, Data, and Application Development.',
+    keywords: 'US IT Staffing Company, Offshore IT Staffing Services, Onsite IT Consultants USA, IT Staffing & Consulting Services, SAP Staffing Company USA, Offshore Delivery Model IT'
+  });
+
   return (
     <>
+
       {/* Hero Section */}
       <section className="hero-section">
         <Container>

@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { 
-  FaGlobe, 
-  FaMapMarkerAlt, 
-  FaUserTie, 
-  FaClock, 
+import { useMetaTags } from '../hooks/useMetaTags';
+import {
+  FaGlobe,
+  FaMapMarkerAlt,
+  FaUserTie,
+  FaClock,
   FaCheckCircle,
   FaArrowRight,
   FaCode,
@@ -91,8 +92,15 @@ const Staffing: React.FC = () => {
     'Reduced hiring risk'
   ];
 
+  useMetaTags({
+    title: 'Offshore & Onsite IT Staffing Services | Bluestone IT Tech LLC',
+    description: 'We deliver JD-aligned offshore and onsite IT consultants to prime vendors and direct clients across the USA.',
+    keywords: 'IT staffing, offshore staffing, onsite consultants, contract IT staffing, SAP staffing, cloud staffing, DevOps staffing'
+  });
+
   return (
     <>
+
       {/* Page Header */}
       <section className="page-header">
         <Container>

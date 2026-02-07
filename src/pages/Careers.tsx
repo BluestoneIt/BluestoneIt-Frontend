@@ -1,5 +1,6 @@
 import React from 'react';
-import { Container, Row, Col, Card } from 'react-bootstrap';
+import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
+import { useMetaTags } from '../hooks/useMetaTags';
 import {
   FaBriefcase,
   FaTrophy,
@@ -67,8 +68,15 @@ const Careers: React.FC = () => {
   //   }
   // ];
 
+  useMetaTags({
+    title: 'Careers | Bluestone IT Tech LLC',
+    description: 'Join our team at Bluestone IT Tech LLC. We offer growth-oriented culture, challenging projects, competitive compensation, and global exposure opportunities.',
+    keywords: 'IT careers, job opportunities, IT consulting jobs, technology careers, software development jobs'
+  });
+
   return (
     <>
+
       {/* Page Header */}
       <section className="page-header">
         <Container>

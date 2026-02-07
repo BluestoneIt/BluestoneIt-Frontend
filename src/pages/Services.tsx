@@ -1,12 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { 
-  FaLightbulb, 
-  FaUsers, 
-  FaLayerGroup, 
-  FaCloud, 
-  FaDatabase, 
+import { useMetaTags } from '../hooks/useMetaTags';
+import {
+  FaLightbulb,
+  FaUsers,
+  FaLayerGroup,
+  FaCloud,
+  FaDatabase,
   FaCode,
   FaArrowRight,
   FaCheckCircle
@@ -84,8 +85,15 @@ const Services: React.FC = () => {
     }
   ];
 
+  useMetaTags({
+    title: 'IT Services & Consulting | Bluestone IT Tech LLC',
+    description: 'Comprehensive IT services including SAP, Cloud & DevOps, Data Engineering, Application Development, and IT Staffing solutions.',
+    keywords: 'IT consulting, SAP services, cloud solutions, DevOps, data engineering, application development, IT staffing'
+  });
+
   return (
     <>
+
       {/* Page Header */}
       <section className="page-header">
         <Container>

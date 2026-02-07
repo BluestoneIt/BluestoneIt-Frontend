@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
+import { useMetaTags } from '../hooks/useMetaTags';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaPaperPlane } from 'react-icons/fa';
 import EmailLink from '../components/EmailLink';
 
 const Contact: React.FC = () => {
+  useMetaTags({
+    title: 'Contact Us | Bluestone IT Tech LLC',
+    description: 'Get in touch with Bluestone IT Tech LLC. Contact us for IT consulting, staffing solutions, and technology services. Located in Maple Valley, Washington.',
+    keywords: 'contact IT company, IT consulting contact, technology services contact, Bluestone IT contact'
+  });
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -36,6 +43,7 @@ const Contact: React.FC = () => {
 
   return (
     <>
+
       {/* Page Header */}
       <section className="page-header">
         <Container>
