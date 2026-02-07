@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Row, Col, Card, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card } from 'react-bootstrap';
 import { useMetaTags } from '../hooks/useMetaTags';
 import {
   FaBriefcase,

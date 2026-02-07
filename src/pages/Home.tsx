@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { useMetaTags } from '../hooks/useMetaTags';
 import {
   FaCode,
-  FaCloud,
   FaChartLine,
   FaUsers,
   FaAward,
