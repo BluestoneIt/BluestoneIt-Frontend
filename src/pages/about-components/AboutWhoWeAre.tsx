@@ -32,8 +32,8 @@ const AboutWhoWeAre: React.FC = () => {
               <img
                 src="/BluestoneUpdateLogoITTech.png"
                 alt="Bluestone IT Tech LLC"
-                className="img-fluid rounded-3 shadow"
-                style={{ marginTop: '-10px', height: '500px', width: '600px', objectFit: 'cover', borderRadius: '50%', backgroundColor: '#f1f1f1' }}
+                className="img-fluid rounded-3 shadow hero-logo-image"
+                style={{ marginTop: '-10px', objectFit: 'cover', borderRadius: '50%', backgroundColor: '#f1f1f1' }}
               />
             </div>
           </Col>
