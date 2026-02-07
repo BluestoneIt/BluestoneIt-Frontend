@@ -283,6 +283,12 @@ html {
   animation: float 3s ease-in-out infinite;
 }
 
+.hero-logo-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
 @keyframes float {
   0%, 100% { transform: translateY(0px); }
   50% { transform: translateY(-20px); }
@@ -744,7 +750,7 @@ html {
   }
 
   .brand-text {
-    display: none;
+    font-size: 1rem;
   }
 
   .navbar-logo {
@@ -1041,5 +1047,9 @@ html {
 @media (max-width: 768px) {
   .hero-image-container img {
     animation: float-mobile 3s ease-in-out infinite;
+  }
+
+  .hero-logo-image {
+    max-height: 300px;
   }
 }
