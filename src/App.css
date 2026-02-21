@@ -33,6 +33,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 body {
@@ -41,6 +42,8 @@ body {
   color: var(--text-color);
   background-color: #ffffff;
   overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 .App {
@@ -117,6 +120,9 @@ h1, h2, h3, h4, h5, h6 {
 /* Smooth Scrolling */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  max-width: 100vw;
+  width: 100%;
 }
 
 /* Navbar Styles */
@@ -131,6 +137,8 @@ html {
   top: 0;
   left: 0;
   right: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .custom-navbar.scrolled {
@@ -138,11 +146,16 @@ html {
   box-shadow: var(--shadow-medium);
 }
 
-.navbar-brand {
+.custom-navbar .navbar-brand {
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--primary-color) !important;
   transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  min-width: 0;
+  max-width: calc(100vw - 60px);
 }
 
 .navbar-brand:hover {
@@ -153,12 +166,11 @@ html {
   height: 40px;
   width: auto;
   max-height: 40px;
+  max-width: 120px;
   object-fit: contain;
   transition: all 0.3s ease;
   filter: brightness(1.1) contrast(1.2);
   padding: 0;
-  transform: scale(2.5);
-  transform-origin: center;
 }
 
 .navbar-logo:hover {
@@ -172,8 +184,6 @@ html {
   object-fit: contain;
   filter: brightness(1.1) contrast(1.2);
   padding: 0;
-  transform: scale(2.5);
-  transform-origin: center;
 }
 
 .brand-text {
@@ -201,15 +211,29 @@ html {
 .navbar-toggler {
   border: none;
   padding: 0.25rem 0.5rem;
+  position: relative;
+  z-index: 1;
 }
 
 .navbar-toggler:focus {
   box-shadow: none;
 }
 
+/* Navbar Collapse Styles */
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+.navbar-collapse.show {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
 /* Hero Section */
 .hero-section {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+  background: url('/BlueEnhance.png') no-repeat center center fixed;
+  background-size: cover;
   position: relative;
   overflow: hidden;
 }
@@ -221,8 +245,7 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-  opacity: 0.3;
+  background: rgba(0, 51, 102, 0.7); /* Semi-transparent navy overlay */
 }
 
 .hero-content {
@@ -409,7 +432,8 @@ html {
 
 /* Page Header */
 .page-header {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+  background: url('/BlueEnhance.png') no-repeat center center;
+  background-size: cover;
   color: white;
   padding: 8rem 0 4rem;
   text-align: center;
@@ -419,6 +443,17 @@ html {
   display: flex;
   align-items: center;
   box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.2);
+}
+
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 51, 102, 0.6); /* Semi-transparent navy overlay */
+  z-index: -1;
 }
 
 /* About Page Styles */
@@ -730,9 +765,30 @@ html {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    width: 100%;
+    max-width: 100vw;
+    z-index: 1050;
+  }
+
+  .navbar-collapse.show {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
   .hero-title {
     font-size: 2.5rem;
+  }
+
+  .hero-section {
+    background-attachment: scroll;
   }
 
   .section-title {
@@ -744,7 +800,12 @@ html {
   }
 
   .hero-section {
-    padding: 2rem 0;
+    background-attachment: scroll;
+    padding: 5rem 0 2rem;
+  }
+
+  .hero-section .row {
+    min-height: auto;
   }
 
   .hero-logo {
@@ -790,15 +851,19 @@ html {
 
   .navbar-brand {
     font-size: 1.25rem;
+    flex-shrink: 1;
+    max-width: calc(100vw - 120px);
   }
 
   .brand-text {
     font-size: 1rem;
+    display: none;
   }
 
   .navbar-logo {
     height: 32px;
     max-width: 90px;
+    transform: scale(1);
   }
 }
 
@@ -826,12 +891,23 @@ html {
   .navbar-logo {
     height: 40px;
     max-width: 150px;
+    transform: scale(1);
   }
 
   .footer-logo {
     height: 32px;
     max-width: 180px;
-    transform: scale(2.5);
+    transform: scale(1);
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .custom-navbar .container {
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 

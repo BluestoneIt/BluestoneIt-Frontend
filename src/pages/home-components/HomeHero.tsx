@@ -19,7 +19,7 @@ const HomeHero: React.FC = () => {
               <Link to="/contact" className="btn btn-primary btn-lg me-3 mb-3">
                 Request Candidates
               </Link>
-              <Link to="/services" className="btn btn-outline-primary btn-lg mb-3">
+              <Link to="/services" className="btn btn-primary btn-lg mb-3">
                 Our Services
               </Link>
             </div>

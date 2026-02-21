@@ -23,6 +23,16 @@ const ContactInfo: React.FC = () => {
 
       <div className="contact-info-item mb-4">
         <div className="contact-icon">
+          <FaMapMarkerAlt />
+        </div>
+        <div className="contact-details">
+          <h6>Office</h6>
+          <p>Visakhapatnam (Vizag)<br />India</p>
+        </div>
+      </div>
+
+      <div className="contact-info-item mb-4">
+        <div className="contact-icon">
           <FaPhone />
         </div>
         <div className="contact-details">

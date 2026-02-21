@@ -52,7 +52,7 @@ const Footer: React.FC = () => {
             <div className="contact-info">
               <div className="contact-item mb-2">
                 <FaMapMarkerAlt className="me-2" />
-                <span>29010 239th Ave SE<br />Maple Valley, WA 98010</span>
+                <span>29010 239th Ave SE<br />Maple Valley, WA 98010<br />Visakhapatnam, India</span>
               </div>
               <div className="contact-item mb-2">
                 <FaPhone className="me-2" />
