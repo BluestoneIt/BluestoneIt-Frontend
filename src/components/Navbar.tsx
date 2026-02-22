@@ -44,7 +44,7 @@ const Navbar: React.FC = () => {
               className="navbar-logo"
             />
           </BootstrapNavbar.Brand>
-          <h5 className="brand-text ms-0 mb-0">Bluestone IT Tech LLC</h5>
+          <h5 className="brand-text ms-0 mb-0">Bluestone IT Tech</h5>
         </div>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav">
           {expanded ? <FaTimes /> : <FaBars />}

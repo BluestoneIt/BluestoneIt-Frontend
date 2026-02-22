@@ -1,13 +1,26 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 const HomeHero: React.FC = () => {
+  const [visible, setVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    const t = setTimeout(() => setVisible(true), 10000);
+    return () => clearTimeout(t);
+  }, []);
+
   return (
     <section className="hero-section">
+      {/* Full-bleed banner outside the centered container */}
+      <div className="hero-banner-wrapper">
+        <img src="/BlueEnhance.png" alt="Bluestone banner" className="hero-banner-image" />
+      </div>
+
       <Container>
-        <Row className="align-items-center min-vh-100">
-          <Col lg={6} className="hero-content" data-aos="fade-up">
+        {/* Content shown after 10s */}
+        <Row className="align-items-center py-5">
+          <Col lg={8} className={`hero-content ${visible ? 'hero-content-visible' : 'hero-content-hidden'}`}>
             <h1 className="hero-title">
               End-to-End IT Staffing & Technology Solutions for US Businesses
             </h1>
@@ -22,16 +35,6 @@ const HomeHero: React.FC = () => {
               <Link to="/services" className="btn btn-primary btn-lg mb-3">
                 Our Services
               </Link>
-            </div>
-          </Col>
-          <Col lg={6} className="hero-image" data-aos="fade-left">
-            <div className="hero-image-container">
-              <img
-                src="/BluestoneUpdateLogoITTech.png"
-                alt="Bluestone IT Tech LLC"
-                className="img-fluid rounded-3 shadow hero-logo-image"
-                style={{ marginTop: '-10px', objectFit: 'cover', borderRadius: '50%', backgroundColor: '#f1f1f1' }}
-              />
             </div>
           </Col>
         </Row>

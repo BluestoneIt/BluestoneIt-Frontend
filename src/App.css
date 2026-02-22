@@ -232,10 +232,9 @@ html {
 
 /* Hero Section */
 .hero-section {
-  background: url('/BlueEnhance.png') no-repeat center center fixed;
-  background-size: cover;
+  background: var(--gradient-primary);
   position: relative;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-section::before {
@@ -245,7 +244,24 @@ html {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 51, 102, 0.7); /* Semi-transparent navy overlay */
+  background: transparent;
+}
+
+/* Full-bleed banner wrapper so image fits left and right */
+.hero-banner-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: block;
+}
+
+.hero-banner-image {
+  display: block;
+  width: 100vw;
+  height: 60vh;
+  max-height: 700px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  object-fit: cover;
 }
 
 .hero-content {
@@ -291,6 +307,15 @@ html {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/* Full-width banner image (normal <img> not background) */
+.hero-banner-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 700px;
+  object-fit: cover;
 }
 
 .hero-logo {
@@ -857,7 +882,9 @@ html {
 
   .brand-text {
     font-size: 1rem;
-    display: none;
+    display: inline-block;
+    margin-left: 0.5rem;
+    vertical-align: middle;
   }
 
   .navbar-logo {
@@ -901,7 +928,10 @@ html {
   }
 
   .brand-text {
-    display: none;
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: 0.95rem;
+    vertical-align: middle;
   }
 
   .custom-navbar .container {
