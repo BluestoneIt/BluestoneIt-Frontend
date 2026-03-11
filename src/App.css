@@ -150,16 +150,17 @@ html {
   font-weight: 700;
   font-size: 1.5rem;
   color: var(--primary-color) !important;
-  transition: all 0.3s ease;
+  transition: none;
   display: flex;
   align-items: center;
   flex-shrink: 0;
   min-width: 0;
   max-width: calc(100vw - 60px);
+  margin-right: 0;
 }
 
 .navbar-brand:hover {
-  transform: scale(1.05);
+  transform: none;
 }
 
 .navbar-logo {
@@ -168,7 +169,7 @@ html {
   max-height: 40px;
   max-width: 120px;
   object-fit: contain;
-  transition: all 0.3s ease;
+  transition: none;
   filter: brightness(1.1) contrast(1.2);
   padding: 0;
 }
@@ -178,17 +179,21 @@ html {
 }
 
 .footer-logo {
-  height: 40px;
+  height: 50px;
   width: auto;
   max-width: 280px;
   object-fit: contain;
   filter: brightness(1.1) contrast(1.2);
   padding: 0;
+  transform: scale(1.6);
+  transform-origin: left center;
 }
 
 .brand-text {
   color: var(--dark-color);
   font-weight: 700;
+  margin-left: 0.1rem !important;
+  padding-left: 0;
 }
 
 .navbar-nav .nav-link {
@@ -711,7 +716,7 @@ html {
 
 .footer-divider {
   border-color: #475569;
-  margin: 2rem 0 1rem;
+  margin: 1rem 0 0.5rem;
 }
 
 .footer-link {
@@ -836,17 +841,19 @@ html {
 
   /* Mobile: remove extra top padding so the banner sits directly under the fixed navbar */
   .hero-section {
+    margin-top: 56px;
     padding-top: 0;
   }
 
   /* Make the full-bleed image truly edge-to-edge on small screens */
   .hero-banner-image {
     width: 100%;
-    height: 50vh;
-    max-height: none;
+    height: auto;
+    max-height: calc(100vh - 56px);
     margin-left: 0;
     transform: none;
-    object-position: top center;
+    object-fit: contain;
+    object-position: center center;
   }
 
   .hero-section .row {
@@ -944,12 +951,13 @@ html {
   .footer-logo {
     height: 32px;
     max-width: 180px;
-    transform: scale(1);
+    transform: scale(1.5);
+    transform-origin: left center;
   }
 
   .brand-text {
     display: inline-block;
-    margin-left: 0.5rem;
+    margin-left: 0.1rem;
     font-size: 0.95rem;
     vertical-align: middle;
   }

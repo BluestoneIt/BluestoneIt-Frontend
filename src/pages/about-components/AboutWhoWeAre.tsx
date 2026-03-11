@@ -9,22 +9,19 @@ const AboutWhoWeAre: React.FC = () => {
           <Col lg={6} className="mb-4" data-aos="fade-right">
             <h2 className="section-title">Who We Are</h2>
             <p className="lead mb-4">
-              <strong>Bluestone IT Tech LLC</strong> is committed to delivering high-quality IT solutions
-              that help organizations grow, innovate, and stay competitive in a rapidly evolving digital world.
+              <strong>Bluestone IT Tech LLC</strong> is a technology consulting and IT staffing company dedicated to helping organizations build high-performing technology teams. We specialize in sourcing, screening, and placing highly skilled IT professionals who help businesses drive innovation and deliver successful projects.
             </p>
             <p>
-              We are a technology consulting firm delivering scalable and secure IT solutions to global
-              clients across multiple industries. Our expertise spans SAP, Cloud, DevOps, Data Engineering,
-              Application Development, and IT Staffing.
+              Our team has deep expertise in identifying top technology talent across a wide range of domains including cloud computing, enterprise applications, data engineering, cybersecurity, and software development.
             </p>
             <p>
-              We help organizations accelerate growth through innovative technology solutions, expert consulting,
-              and reliable offshore and onsite delivery models. Our team comprises certified specialists with
-              deep industry knowledge and proven expertise.
+              At Bluestone IT Tech, we are committed to building long-term partnerships with our clients by delivering quality talent, exceptional service, and measurable results.
             </p>
             <p>
-              It is no coincidence that the name <strong>Bluestone IT Tech LLC</strong> has become
-              synonymous with quality and committed service delivery of technology solutions to our valued clients.
+              We partner with prime vendors, system integrators, and direct clients to provide flexible staffing solutions that meet evolving project requirements
+            </p>
+            <p>
+              At Bluestone IT Tech, our focus is simple: <strong>deliver the right talent, at the right time, to help our clients succeed.</strong>
             </p>
           </Col>
           <Col lg={6} data-aos="fade-left">
@@ -33,7 +30,6 @@ const AboutWhoWeAre: React.FC = () => {
                 src="/BluestoneUpdateLogoITTech.png"
                 alt="Bluestone IT Tech LLC"
                 className="img-fluid rounded-3 shadow hero-logo-image"
-                style={{ marginTop: '-10px', objectFit: 'cover', borderRadius: '50%', backgroundColor: '#f1f1f1' }}
               />
             </div>
           </Col>

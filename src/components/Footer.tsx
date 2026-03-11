@@ -10,13 +10,13 @@ const Footer: React.FC = () => {
   return (
     <footer className="custom-footer">
       <Container>
-        <Row className="py-5">
+        <Row className="py-4">
           <Col lg={4} md={6} className="mb-4">
             <div className="footer-brand">
               <img
                 src={logo}
                 alt="Bluestone IT Technologies LLC"
-                className="footer-logo mb-3"
+                className="footer-logo mb-1"
               />
               <h5 className="text-white mb-3">Bluestone IT Technologies LLC</h5>
               <p className="text-light">
@@ -52,11 +52,17 @@ const Footer: React.FC = () => {
             <div className="contact-info">
               <div className="contact-item mb-2">
                 <FaMapMarkerAlt className="me-2" />
-                <span>29010 239th Ave SE<br />Maple Valley, WA 98010<br />Visakhapatnam, India</span>
+                <span>29010 239th Ave SE, Maple Valley, WA 98010, USA</span>
+              </div>
+              <div className="contact-item mb-2">
+                <FaMapMarkerAlt className="me-2" />
+                <span>Visakhapatnam, AP, India</span>
               </div>
               <div className="contact-item mb-2">
                 <FaPhone className="me-2" />
-                <span>+1-484-521-1051</span>
+                <a href="tel:+14845211051" className="text-decoration-none" style={{ color: 'inherit' }}>
+                  +1-484-521-1051
+                </a>
               </div>
               <div className="contact-item mb-3">
                 <FaEnvelope className="me-2" />
@@ -74,7 +80,7 @@ const Footer: React.FC = () => {
 
         <hr className="footer-divider" />
 
-        <Row className="py-3">
+        <Row className="py-0">
           <Col lg={6} md={6} className="text-start">
             <p className="mb-0 text-light">
               &copy; {currentYear} Bluestone IT Tech LLC. All rights reserved.

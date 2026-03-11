@@ -30,29 +30,56 @@ Thanks & Regards,
   const [showModal, setShowModal] = useState(false);
 
   const fullBody = signature ? `${body}\n\n${signature}` : body;
+  const formattedSubject = encodeURIComponent(subject);
+  const formattedBody = encodeURIComponent(fullBody).replace(/%0A/g, '%0D%0A');
+  const mailtoLink = `mailto:${email}?subject=${formattedSubject}&body=${formattedBody}`;
+  const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+
+  const openSystemEmail = () => {
+    window.location.href = mailtoLink;
+    setShowModal(false);
+  };
 
   const handleGmail = () => {
-    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullBody)}`;
+    if (isMobile) {
+      openSystemEmail();
+      return;
+    }
+
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${formattedSubject}&body=${formattedBody}`;
     window.open(gmailUrl, '_blank');
     setShowModal(false);
   };
 
   const handleOutlook = () => {
-    const outlookUrl = `https://outlook.live.com/mail/0/deeplink/compose?to=${email}&subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(fullBody)}`;
+    if (isMobile) {
+      openSystemEmail();
+      return;
+    }
+
+    const outlookUrl = `https://outlook.office.com/mail/deeplink/compose?to=${email}&subject=${formattedSubject}&body=${formattedBody}`;
     window.open(outlookUrl, '_blank');
     setShowModal(false);
+  };
+
+  const handleEmailClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (isMobile) {
+      return;
+    }
+
+    e.preventDefault();
+    setShowModal(true);
   };
 
   return (
     <>
       <a
-        href="#"
+        href={mailtoLink}
         className={className}
         style={{ color: 'inherit', textDecoration: 'none', cursor: 'pointer' }}
-        onClick={(e) => {
-          e.preventDefault();
-          setShowModal(true);
-        }}
+        onClick={handleEmailClick}
       >
         {displayText || email}
       </a>
@@ -70,6 +97,9 @@ Thanks & Regards,
             <Button variant="primary" onClick={handleOutlook}>
               <FaMicrosoft className="me-2" /> Outlook
             </Button>
+            {/* <Button variant="outline-primary" onClick={openSystemEmail}>
+              Default Email App
+            </Button> */}
           </div>
         </Modal.Body>
       </Modal>

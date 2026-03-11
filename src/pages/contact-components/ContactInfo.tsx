@@ -37,7 +37,11 @@ const ContactInfo: React.FC = () => {
         </div>
         <div className="contact-details">
           <h6>Phone Number</h6>
-          <p>+1-484-521-1051</p>
+          <p>
+            <a href="tel:+14845211051" className="text-decoration-none" style={{ color: 'inherit' }}>
+              +1-484-521-1051
+            </a>
+          </p>
         </div>
       </div>
 

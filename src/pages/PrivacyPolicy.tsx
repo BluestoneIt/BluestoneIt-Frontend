@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import { FaMapMarkerAlt, FaEnvelope, FaPhone } from 'react-icons/fa';
 import EmailLink from '../components/EmailLink';
 
 const PrivacyPolicy: React.FC = () => {
@@ -179,11 +180,26 @@ const PrivacyPolicy: React.FC = () => {
                       </p>
                       <div className="contact-info mt-3">
                         <p><strong>Bluestone IT</strong></p>
-                        <p>123 Tech Innovation Drive<br />
-                        Digital City, TC 12345<br />
-                        United States</p>
-                        <p><strong>Email:</strong> <EmailLink email="info@bluestoneit.com" /></p>
-                        <p><strong>Phone:</strong> +1 (555) 123-4567</p>
+                        <p className="d-flex align-items-start mb-1">
+                          <FaMapMarkerAlt className="me-2 mt-1" />
+                          <span>29010 239th Ave SE, Maple Valley, WA 98010, USA</span>
+                        </p>
+                        <p className="d-flex align-items-start mb-3">
+                          <FaMapMarkerAlt className="me-2 mt-1" />
+                          <span>Visakhapatnam, AP, India</span>
+                        </p>
+                        <p className="d-flex align-items-start mb-2">
+                          <FaEnvelope className="me-2 mt-1" />
+                          <span><EmailLink email="info@bluestoneittech.com" /></span>
+                        </p>
+                        <p className="d-flex align-items-start mb-0">
+                          <FaPhone className="me-2 mt-1" />
+                          <span>
+                            <a href="tel:+14845211051" className="text-decoration-none" style={{ color: 'inherit' }}>
+                              +1-(484)-521-1051
+                            </a>
+                          </span>
+                        </p>
                       </div>
                     </div>
                   </div>

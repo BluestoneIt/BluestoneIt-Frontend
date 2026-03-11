@@ -5,8 +5,9 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 import logo from '../assets/SymbolBluestone.png';
 
 const Navbar: React.FC = () => {
-  const [expanded, setExpanded] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
+  const [expanded, setExpanded] = useState<boolean>(false);
+  const [scrolled, setScrolled] = useState<boolean>(false);
+  const [servicesOpen, setServicesOpen] = useState<boolean>(false);
   const location = useLocation();
 
   useEffect(() => {
@@ -25,6 +26,19 @@ const Navbar: React.FC = () => {
 
   const handleNavClose = () => {
     setExpanded(false);
+    setServicesOpen(false);
+  };
+
+  const handleServicesMouseEnter = () => {
+    if (window.innerWidth >= 992) {
+      setServicesOpen(true);
+    }
+  };
+
+  const handleServicesMouseLeave = () => {
+    if (window.innerWidth >= 992) {
+      setServicesOpen(false);
+    }
   };
 
   return (
@@ -36,16 +50,14 @@ const Navbar: React.FC = () => {
       className={`custom-navbar ${scrolled ? 'scrolled' : ''}`}
     >
       <Container>
-        <div className="d-flex align-items-center">
-          <BootstrapNavbar.Brand as={Link} to="/" onClick={handleNavClose}>
-            <img
-              src={logo}
-              alt="Bluestone IT Tech LLC"
-              className="navbar-logo"
-            />
-          </BootstrapNavbar.Brand>
-          <h5 className="brand-text ms-0 mb-0">Bluestone IT Tech</h5>
-        </div>
+        <BootstrapNavbar.Brand as={Link} to="/" onClick={handleNavClose} className="d-flex align-items-center text-decoration-none">
+          <img
+            src={logo}
+            alt="Bluestone IT Tech LLC"
+            className="navbar-logo me-0"
+          />
+          <h5 className="brand-text mb-0" style={{color: 'blue'}}>Bluestone IT Tech</h5>
+        </BootstrapNavbar.Brand>
         <BootstrapNavbar.Toggle aria-controls="basic-navbar-nav">
           {expanded ? <FaTimes /> : <FaBars />}
         </BootstrapNavbar.Toggle>
@@ -68,7 +80,14 @@ const Navbar: React.FC = () => {
             >
               About Us
             </Nav.Link>
-            <NavDropdown title="Services" id="services-dropdown">
+            <NavDropdown
+              title="Services"
+              id="services-dropdown"
+              show={servicesOpen}
+              onMouseEnter={handleServicesMouseEnter}
+              onMouseLeave={handleServicesMouseLeave}
+              onToggle={(isOpen) => setServicesOpen(isOpen)}
+            >
               <NavDropdown.Item as={Link} to="/services" onClick={handleNavClose}>
                 All Services
               </NavDropdown.Item>
